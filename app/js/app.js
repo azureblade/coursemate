@@ -12,6 +12,10 @@ App.config(function($routeProvider) {
 			controller: 'CalendarCtrl',
 			templateUrl: 'partials/calendar.html'
 		})
+		.when('/calendar/:Month/:Day', {
+			controller: 'CalendarDetailCtrl',
+			templateUrl: 'partials/calendar-detail.html'
+		})
 		.when('/courses', {
 			controller: 'CourseListCtrl',
 			templateUrl: 'partials/courses.html'
@@ -32,5 +36,5 @@ App.config(function($routeProvider) {
 });
 
 // App.run(function() {
-	
+
 // });

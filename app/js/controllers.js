@@ -35,16 +35,6 @@ function CalendarCtrl($scope) {
 		console.log(elem.prop('innerText'));
 	}
 
-	$scope.hover = function(e) {
-		var elem = angular.element(e.srcElement);
-		elem.css('color', '#3c88cc');
-	}
-
-	$scope.clear = function(e) {
-		var elem = angular.element(e.srcElement);
-		elem.css('color', 'black');
-	}
-
 	function generate(m) {
 		var today = $scope.today;
 
