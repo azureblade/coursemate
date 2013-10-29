@@ -24,14 +24,34 @@ function NavigationCtrl($scope) {
 }
 
 function CalendarCtrl($scope) {
+	$scope.current = new Date();
 	$scope.today = new Date();
 	// Init
 	// $scope.month = generate($scope.today.getMonth());
-	$scope.month = generate(10);
+	$scope.month = generate(1);
+
+	$scope.click = function(e) {
+		var elem = angular.element(e.srcElement);
+		console.log(elem.prop('innerText'));
+	}
+
+	$scope.hover = function(e) {
+		var elem = angular.element(e.srcElement);
+		elem.css('color', '#3c88cc');
+	}
+
+	$scope.clear = function(e) {
+		var elem = angular.element(e.srcElement);
+		elem.css('color', 'black');
+	}
 
 	function generate(m) {
 		var today = $scope.today;
-		today.setFullYear(today.getFullYear(), m, 1);
+
+		if (today.getDate() > daysInMonth(m)) {
+			today.setFullYear(today.getFullYear(), m, 1);
+		}
+		
 		// var today = new Date();
 
 		var month = [];
