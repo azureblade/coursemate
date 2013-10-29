@@ -30,11 +30,18 @@ function CalendarCtrl($scope) {
 		var month = [];
 
 		var first = new Date(today.getFullYear(), today.getMonth(), 1);
+		//var last = new Date();
+		//last.setFullYear(today.getFullYear(), today.getMonth() + 1, 0);
+		//console.log('last', last.getDay());
 		console.log(first.getDay() + 1);
 
 		var days = daysInMonth(today.getMonth());
+		console.log('days', days);
 
-		for (var i = 1; i <= days; i += 7) {
+		var last = new Date(today.getFullYear(), today.getMonth(), days);
+
+		for (var i = 1; i < days; i += 7) {
+			console.log("i", i);
 			if (i === 1) {
 				switch(first.getDay()) {
 					case 1:
@@ -47,7 +54,7 @@ function CalendarCtrl($scope) {
 							"Saturday": (i + 5 < days) ? i + 5: "",
 							"Sunday": ""
 						});
-						i += 1;
+						i -= 1;
 						break;
 					case 2:
 						month.push({
@@ -59,7 +66,7 @@ function CalendarCtrl($scope) {
 							"Sunday": "",
 							"Monday": ""
 						});
-						i += 2;
+						i -= 2;
 						break;
 					case 3:
 						month.push({
@@ -71,7 +78,7 @@ function CalendarCtrl($scope) {
 							"Monday": "",
 							"Tuesday": ""
 						});
-						i += 3;
+						i -= 3;
 						break;
 					case 4:
 						month.push({
@@ -83,7 +90,7 @@ function CalendarCtrl($scope) {
 							"Tuesday": "",
 							"Thursday": ""
 						});
-						i += 4;
+						i -= 4;
 						break;
 					case 5:
 						month.push({
@@ -95,7 +102,7 @@ function CalendarCtrl($scope) {
 							"Wednesday": "",
 							"Thursday": ""
 						});
-						i += 5;
+						i -= 5;
 						break;
 					case 6:
 						month.push({
@@ -107,7 +114,7 @@ function CalendarCtrl($scope) {
 							"Thursday": "",
 							"Friday": ""
 						});
-						i += 6;
+						i -= 6;
 						break;
 					default:
 						month.push({
@@ -120,6 +127,11 @@ function CalendarCtrl($scope) {
 							"Saturday": (i + 6 < days) ? i + 6 : ""
 						});
 				}
+			} else if (i + last.getDay() === days) {
+				console.log('else if');
+				// switch(first.getDay()) {
+					
+				// }
 			} else {
 				month.push({
 					"Sunday": (i < days) ? i : "",
