@@ -30,7 +30,7 @@ function CalendarCtrl($scope) {
 		var month = [];
 
 		for (var i = 1; i < daysInMonth(today.getMonth()); i++) {
-			
+
 		}
 	}
 
@@ -106,7 +106,13 @@ function CalendarCtrl($scope) {
 
 function CourseListCtrl($scope, $http) {
 	$http.get('./temp-data/courses.json').success(function(data) {
-		$scope.courses = data;
+		var courses = [];
+
+		angular.forEach(data, function(value, key) {
+			courses.push(value);
+		});
+
+		$scope.courses = courses;
 	});
 }
 
@@ -118,7 +124,13 @@ function CourseDetailCtrl($scope, $routeParams, $http) {
 
 function FriendListCtrl($scope, $http) {
 	$http.get('./temp-data/friends.json').success(function(data) {
-		$scope.friends = data;
+		var friends = [];
+
+		angular.forEach(data, function(value, key) {
+			friends.push(value);
+		});
+
+		$scope.friends = friends;
 	});
 }
 
