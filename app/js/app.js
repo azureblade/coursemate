@@ -6,7 +6,7 @@ App.config(function($routeProvider) {
 	$routeProvider
 		.when('/', {
 			controller: '',
-			templateUrl: 'partials/home.html'
+			templateUrl: 'partials/splash.html'
 		})
 		.otherwise({ redirectTo: '/' });
 });

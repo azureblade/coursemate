@@ -12,7 +12,9 @@
     <meta name="author" content="Marshall Bowers">
     <meta name="copyright" content="&copy; 2013 Marshall Bowers">
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/format.css">
 
 	<script src="lib/angular/angular.min.js"></script>
 	<script src="lib/angular/angular-route.min.js"></script>
@@ -21,8 +23,13 @@
 	<script src="js/controllers.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div ng-view></div>
+	<div class="header">
+		<nav>
+		</nav>
 	</div>
+	<div class="container" ng-view></div>
+	<!-- <div class="container">
+		<div class="container" ng-view></div>
+	</div> -->
 </body>
 </html>
