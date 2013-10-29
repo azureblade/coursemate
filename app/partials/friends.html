@@ -1,0 +1,16 @@
+<h2>Friends</h2>
+<input type="search" ng-model="q" placeholder="Search" />
+<div class="content">
+	<table class="friends">
+		<tr>
+			<th>Username</th>
+			<th>Name</th>
+			<th>School</th>
+		</tr>
+		<tr ng-repeat="friend in friends | filter: q">
+			<td>{{friend.Username}}</td>
+			<td>{{friend.Name}}</td>
+			<td>{{friend.School}}</td>
+		</tr>
+	</table>
+</div>
