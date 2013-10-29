@@ -29,10 +29,29 @@ function CalendarCtrl($scope) {
 
 		var month = [];
 
-		for (var i = 1; i < daysInMonth(today.getMonth()); i++) {
+		var first = new Date(today.getFullYear(), today.getMonth(), 1);
+		console.log(first.getDay() + 1);
 
+		var days = daysInMonth(today.getMonth());
+
+		for (var i = 1; i < days; i += 7) {
+			//(i < days) ? i : "";
+			month.push({
+				"Sunday": (i < days) ? i : "",
+				"Monday": (i + 1 < days) ? i + 1 : "",
+				"Tuesday": (i + 2 < days) ? i + 2: "",
+				"Wednesday": (i + 3 < days) ? i + 3 : "",
+				"Thursday": (i + 4 < days) ? i + 4: "",
+				"Friday": (i + 5 < days) ? i + 5: "",
+				"Saturday": (i + 6 < days) ? i + 6 : ""
+			});
 		}
+
+		console.log(month);
+		return month;
 	}
+
+	$scope.month = generate();
 
 	function daysInMonth(month) {
 		var today = new Date();
@@ -55,53 +74,53 @@ function CalendarCtrl($scope) {
 		return days
 	}
 
-	$scope.month = [
-		{
-			"Sunday": "", 
-			"Monday": "",
-			"Tuesday": "1",
-			"Wednesday": "2",
-			"Thursday": "3",
-			"Friday": "4",
-			"Saturday": "6"
-		},
-		{
-			"Sunday": "7", 
-			"Monday": "8",
-			"Tuesday": "9",
-			"Wednesday": "10",
-			"Thursday": "11",
-			"Friday": "12",
-			"Saturday": "13"
-		},
-		{
-			"Sunday": "14", 
-			"Monday": "15",
-			"Tuesday": "16",
-			"Wednesday": "17",
-			"Thursday": "18",
-			"Friday": "19",
-			"Saturday": "20"
-		},
-		{
-			"Sunday": "21", 
-			"Monday": "22",
-			"Tuesday": "23",
-			"Wednesday": "24",
-			"Thursday": "25",
-			"Friday": "26",
-			"Saturday": "27"
-		},
-		{
-			"Sunday": "28", 
-			"Monday": "29",
-			"Tuesday": "30",
-			"Wednesday": "31",
-			"Thursday": "",
-			"Friday": "",
-			"Saturday": ""
-		}
-	];
+	// $scope.month = [
+	// 	{
+	// 		"Sunday": "", 
+	// 		"Monday": "",
+	// 		"Tuesday": "1",
+	// 		"Wednesday": "2",
+	// 		"Thursday": "3",
+	// 		"Friday": "4",
+	// 		"Saturday": "6"
+	// 	},
+	// 	{
+	// 		"Sunday": "7", 
+	// 		"Monday": "8",
+	// 		"Tuesday": "9",
+	// 		"Wednesday": "10",
+	// 		"Thursday": "11",
+	// 		"Friday": "12",
+	// 		"Saturday": "13"
+	// 	},
+	// 	{
+	// 		"Sunday": "14", 
+	// 		"Monday": "15",
+	// 		"Tuesday": "16",
+	// 		"Wednesday": "17",
+	// 		"Thursday": "18",
+	// 		"Friday": "19",
+	// 		"Saturday": "20"
+	// 	},
+	// 	{
+	// 		"Sunday": "21", 
+	// 		"Monday": "22",
+	// 		"Tuesday": "23",
+	// 		"Wednesday": "24",
+	// 		"Thursday": "25",
+	// 		"Friday": "26",
+	// 		"Saturday": "27"
+	// 	},
+	// 	{
+	// 		"Sunday": "28", 
+	// 		"Monday": "29",
+	// 		"Tuesday": "30",
+	// 		"Wednesday": "31",
+	// 		"Thursday": "",
+	// 		"Friday": "",
+	// 		"Saturday": ""
+	// 	}
+	// ];
 }
 
 function CourseListCtrl($scope, $http) {
