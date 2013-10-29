@@ -1,27 +1,32 @@
-[
-	{
-		"Username": "wrecking_ball",
-		"Name": "Miley Cyrus",
-		"School": "Twerk U"
-	},
-	{
-		"Username": "holy_angel",
-		"Name": "Misha Collins",
-		"School": "Divine Academy"
-	},
-	{
-		"Username": "bbatch",
-		"Name": "Benedict Cumberbatch",
-		"School": "Starfleet"
-	},
-	{
-		"Username": "maxdeviant",
-		"Name": "Marshall Bowers",
-		"School": "West Chester University"
-	},
-	{
-		"Username": "kitsune-fox",
-		"Name": "Erin Fox",
-		"School": "West Chester University"
-	}
-]
+{
+	"wrecking_ball":
+		{
+			"Username": "wrecking_ball",
+			"Name": "Miley Cyrus",
+			"School": "Twerk U"
+		},
+	"holy_angel": 
+		{
+			"Username": "holy_angel",
+			"Name": "Misha Collins",
+			"School": "Divine Academy"
+		},
+	"bbatch": 
+		{
+			"Username": "bbatch",
+			"Name": "Benedict Cumberbatch",
+			"School": "Starfleet"
+		},
+	"maxdeviant":
+		{
+			"Username": "maxdeviant",
+			"Name": "Marshall Bowers",
+			"School": "West Chester University"
+		},
+	"kitsune-fox":
+		{
+			"Username": "kitsune-fox",
+			"Name": "Erin Fox",
+			"School": "West Chester University"
+		}
+}
