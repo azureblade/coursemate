@@ -24,8 +24,15 @@ function NavigationCtrl($scope) {
 }
 
 function CalendarCtrl($scope) {
-	function generate() {
-		var today = new Date();
+	$scope.today = new Date();
+	// Init
+	// $scope.month = generate($scope.today.getMonth());
+	$scope.month = generate(10);
+
+	function generate(m) {
+		var today = $scope.today;
+		today.setFullYear(today.getFullYear(), m, 1);
+		// var today = new Date();
 
 		var month = [];
 
@@ -33,15 +40,12 @@ function CalendarCtrl($scope) {
 		//var last = new Date();
 		//last.setFullYear(today.getFullYear(), today.getMonth() + 1, 0);
 		//console.log('last', last.getDay());
-		console.log(first.getDay() + 1);
 
 		var days = daysInMonth(today.getMonth());
-		console.log('days', days);
 
 		var last = new Date(today.getFullYear(), today.getMonth(), days);
 
 		for (var i = 1; i < days; i += 7) {
-			// console.log("i", i);
 			if (i === 1) {
 				switch(first.getDay()) {
 					case 1:
@@ -140,14 +144,11 @@ function CalendarCtrl($scope) {
 			}
 		}
 
-		console.log(month);
 		return month;
 	}
 
-	$scope.month = generate();
-
 	function daysInMonth(month) {
-		var today = new Date();
+		var today = $scope.today;
 		var days;
 
 		switch(month + 1) {
@@ -164,7 +165,6 @@ function CalendarCtrl($scope) {
 				days = 31;
 		}
 
-		console.log(days);
 		return days;
 	}
 
