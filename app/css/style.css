@@ -7,6 +7,12 @@ body {
 	background: #e2d9cd;
 }
 
+.container {
+	margin: 0 auto;
+	width: 960px;
+	padding: 25px;
+}
+
 .header {
 	width: 100%;
 	height: 50px;
@@ -18,10 +24,18 @@ nav {
 	/*width: calc(100% - 100px);*/
 }
 
-.container {
-	margin: 0 auto;
-	width: 960px;
-	padding: 25px;
+.nav li {
+	padding: 10px 10px 0 10px;
+	display: inline-block;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 h1 {
@@ -29,6 +43,12 @@ h1 {
 	font-weight: 300;
 	font-size: 70px;
 	text-align: center;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 50px;
 }
 
 p {
