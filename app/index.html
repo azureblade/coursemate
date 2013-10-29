@@ -27,7 +27,7 @@
 	<div class="header">
 		<nav ng-controller="NavigationCtrl">
 			<ul class="nav">
-				<li ng-repeat="e in nav"><a href="{{e.Url}}">{{e.Name}}</a></li>
+				<li ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i><a href="{{e.Url}}">{{e.Name}}</a></li>
 			</ul>
 			<!-- <ul class="nav">
 				<li><a href="#/">Home</a></li>

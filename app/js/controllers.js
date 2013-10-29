@@ -2,19 +2,23 @@ function NavigationCtrl($scope) {
 	$scope.nav = [
 		{
 			Name: "Home",
-			Url: "#/"
+			Url: "#/",
+			Icon: "fa fa-home"
 		},
 		{
 			Name: "Calendar",
-			Url: "#/calendar"
+			Url: "#/calendar",
+			Icon: "fa fa-calendar"
 		},
 		{
 			Name: "Courses",
-			Url: "#/courses"
+			Url: "#/courses",
+			Icon: "fa fa-book"
 		},
 		{
 			Name: "Friends",
-			Url: "#/friends"
+			Url: "#/friends",
+			Icon: "fa fa-user"
 		}
 	];
 }
