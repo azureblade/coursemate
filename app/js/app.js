@@ -13,8 +13,12 @@ App.config(function($routeProvider) {
 			templateUrl: 'partials/calendar.html'
 		})
 		.when('/courses', {
-			controller: 'CoursesCtrl',
+			controller: 'CourseListCtrl',
 			templateUrl: 'partials/courses.html'
+		})
+		.when('/courses/:ID', {
+			controller: 'CourseDetailCtrl',
+			templateUrl: 'partials/course-detail.html'
 		})
 		.when('/friends', {
 			controller: 'FriendListCtrl',

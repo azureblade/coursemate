@@ -1,0 +1,20 @@
+[
+	{
+		"ID": "CSC301",
+		"Name": "Computer Security I",
+		"Grade": "A",
+		"Credits": "3"
+	},
+	{
+		"ID": "CSC241",
+		"Name": "Data Structures & Algorithms",
+		"Grade": "A",
+		"Credits": "3"
+	},
+	{
+		"ID": "MAT151",
+		"Name": "Discrete Mathematics",
+		"Grade": "A",
+		"Credits": "3"
+	}
+]

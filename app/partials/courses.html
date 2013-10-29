@@ -1,2 +1,21 @@
 <h2>Courses</h2>
+<input class="search" type="search" ng-model="q" placeholder="Search" />
 <hr>
+<div class="content">
+	<table class="courses">
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Grade</th>
+			<th>Credits</th>
+		</tr>
+		<tr ng-repeat="course in courses | filter: q">
+			<td class="fa fa-book"></td>
+			<td><a href="#/courses/{{course.ID}}">{{course.ID}}</a></td>
+			<td>{{course.Name}}</td>
+			<td>{{course.Grade}}</td>
+			<td>{{course.Credits}}</td>
+		</tr>
+	</table>
+</div>
