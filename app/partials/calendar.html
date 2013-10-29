@@ -1,2 +1,24 @@
 <h2>Calendar</h2>
 <hr>
+<div class="content">
+	<table class="calendar">
+		<tr>
+			<th>Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th>Saturday</th>
+		</tr>
+		<tr ng-repeat="week in month">
+			<td>{{week.Sunday}}</td>
+			<td>{{week.Monday}}</td>
+			<td>{{week.Tuesday}}</td>
+			<td>{{week.Wednesday}}</td>
+			<td>{{week.Thursday}}</td>
+			<td>{{week.Friday}}</td>
+			<td>{{week.Saturday}}</td>
+		</tr>
+	</table>
+</div>
