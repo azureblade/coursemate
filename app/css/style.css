@@ -54,6 +54,7 @@ h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 50px;
+	display: inline;
 }
 
 p {
@@ -63,4 +64,17 @@ p {
 
 td {
 	padding: 0px 50px 0px 0px;
+}
+
+.search {
+	margin-left: 50px;
+}
+
+hr {
+	border: 0;
+	width: 80%;
+	color: #3c88cc;
+	background-color: #3c88cc;
+	height: 5px;
+	margin: 10px 0 10px 0;
 }
