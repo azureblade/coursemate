@@ -30,3 +30,7 @@ App.config(function($routeProvider) {
 		})
 		.otherwise({ redirectTo: '/' });
 });
+
+// App.run(function() {
+	
+// });
