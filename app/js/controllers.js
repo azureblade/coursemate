@@ -1,3 +1,24 @@
+function NavigationCtrl($scope) {
+	$scope.nav = [
+		{
+			Name: "Home",
+			Url: "#/"
+		},
+		{
+			Name: "Calendar",
+			Url: "#/calendar"
+		},
+		{
+			Name: "Courses",
+			Url: "#/courses"
+		},
+		{
+			Name: "Friends",
+			Url: "#/friends"
+		}
+	];
+}
+
 function CalendarCtrl($scope) {
 
 }
@@ -10,23 +31,6 @@ function FriendListCtrl($scope, $http) {
 	$http.get('./friends.json').success(function(data) {
 		$scope.friends = data;
 	});
-	// $scope.friends = [
-	// 	{
-	// 		Username: "wrecking_ball",
-	// 		Name: "Miley Cyrus",
-	// 		School: "Twerk U"
-	// 	},
-	// 	{
-	// 		Username: "holy_angel",
-	// 		Name: "Misha Collins",
-	// 		School: "Divine Academy"
-	// 	},
-	// 	{
-	// 		Username: "bbatch",
-	// 		Name: "Benedict Cumberbatch",
-	// 		School: "Starfleet"
-	// 	}
-	// ];
 }
 
 function FriendProfileCtrl($scope, $routeParams, $http) {

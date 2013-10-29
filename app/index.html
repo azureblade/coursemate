@@ -25,16 +25,16 @@
 </head>
 <body>
 	<div class="header">
-		<nav>
-			<!-- <ul class="nav">
-				<li ng-repeat="link in nav"><a href="{{link.Url}}">{{link.Name}}</a></li>
-			</ul> -->
+		<nav ng-controller="NavigationCtrl">
 			<ul class="nav">
+				<li ng-repeat="link in nav"><a href="{{link.Url}}">{{link.Name}}</a></li>
+			</ul>
+			<!-- <ul class="nav">
 				<li><a href="#/">Home</a></li>
 				<li><a href="#/calendar">Calendar</a></li>
 				<li><a href="#/courses">Courses</a></li>
 				<li><a href="#/friends">Friends</a></li>
-			</ul>
+			</ul> -->
 		</nav>
 	</div>
 	<div class="container" ng-view></div>
