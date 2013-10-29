@@ -1,5 +1,5 @@
 <h2>Calendar</h2>
-<div style="margin-left: 50px; display: inline;">{{current.toDateString()}}</div>
+<div style="margin-left: 50px; display: inline;">{{today.toDateString()}}</div>
 <hr>
 <div class="content">
 	<table class="calendar">
@@ -13,13 +13,13 @@
 			<th>Saturday</th>
 		</tr>
 		<tr ng-repeat="week in month">
-			<td ng-click="click($event)">{{week.Sunday}}</td>
-			<td ng-click="click($event)">{{week.Monday}}</td>
-			<td ng-click="click($event)">{{week.Tuesday}}</td>
-			<td ng-click="click($event)">{{week.Wednesday}}</td>
-			<td ng-click="click($event)">{{week.Thursday}}</td>
-			<td ng-click="click($event)">{{week.Friday}}</td>
-			<td ng-click="click($event)">{{week.Saturday}}</td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Sunday}}">{{week.Sunday}}</a></td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Monday}}">{{week.Monday}}</a></td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Tuesday}}">{{week.Tuesday}}</a></td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Wednesday}}">{{week.Wednesday}}</a></td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Thursday}}">{{week.Thursday}}</a></td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Friday}}">{{week.Friday}}</a></td>
+			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Saturday}}">{{week.Saturday}}</a></td>
 		</tr>
 	</table>
 </div>

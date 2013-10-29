@@ -23,12 +23,12 @@ function NavigationCtrl($scope) {
 	];
 }
 
-function CalendarCtrl($scope) {
-	$scope.current = new Date();
+function CalendarCtrl($scope, $location) {
 	$scope.today = new Date();
+	$scope.current = $scope.today;
 	// Init
-	// $scope.month = generate($scope.today.getMonth());
-	$scope.month = generate(1);
+	$scope.month = generate($scope.current.getMonth());
+	//$scope.month = generate(10);
 
 	$scope.click = function(e) {
 		var elem = angular.element(e.srcElement);
@@ -36,7 +36,7 @@ function CalendarCtrl($scope) {
 	}
 
 	function generate(m) {
-		var today = $scope.today;
+		var today = $scope.current;
 
 		if (today.getDate() > daysInMonth(m)) {
 			today.setFullYear(today.getFullYear(), m, 1);
@@ -47,9 +47,6 @@ function CalendarCtrl($scope) {
 		var month = [];
 
 		var first = new Date(today.getFullYear(), today.getMonth(), 1);
-		//var last = new Date();
-		//last.setFullYear(today.getFullYear(), today.getMonth() + 1, 0);
-		//console.log('last', last.getDay());
 
 		var days = daysInMonth(today.getMonth());
 
@@ -177,54 +174,10 @@ function CalendarCtrl($scope) {
 
 		return days;
 	}
+}
 
-	// $scope.month = [
-	// 	{
-	// 		"Sunday": "", 
-	// 		"Monday": "",
-	// 		"Tuesday": "1",
-	// 		"Wednesday": "2",
-	// 		"Thursday": "3",
-	// 		"Friday": "4",
-	// 		"Saturday": "6"
-	// 	},
-	// 	{
-	// 		"Sunday": "7", 
-	// 		"Monday": "8",
-	// 		"Tuesday": "9",
-	// 		"Wednesday": "10",
-	// 		"Thursday": "11",
-	// 		"Friday": "12",
-	// 		"Saturday": "13"
-	// 	},
-	// 	{
-	// 		"Sunday": "14", 
-	// 		"Monday": "15",
-	// 		"Tuesday": "16",
-	// 		"Wednesday": "17",
-	// 		"Thursday": "18",
-	// 		"Friday": "19",
-	// 		"Saturday": "20"
-	// 	},
-	// 	{
-	// 		"Sunday": "21", 
-	// 		"Monday": "22",
-	// 		"Tuesday": "23",
-	// 		"Wednesday": "24",
-	// 		"Thursday": "25",
-	// 		"Friday": "26",
-	// 		"Saturday": "27"
-	// 	},
-	// 	{
-	// 		"Sunday": "28", 
-	// 		"Monday": "29",
-	// 		"Tuesday": "30",
-	// 		"Wednesday": "31",
-	// 		"Thursday": "",
-	// 		"Friday": "",
-	// 		"Saturday": ""
-	// 	}
-	// ];
+function CalendarDetailCtrl($scope, $routeParams) {
+	$scope.current = new Date($routeParams.Year, $routeParams.Month - 1, $routeParams.Day);
 }
 
 function CourseListCtrl($scope, $http) {

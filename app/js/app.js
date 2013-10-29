@@ -12,7 +12,7 @@ App.config(function($routeProvider) {
 			controller: 'CalendarCtrl',
 			templateUrl: 'partials/calendar.html'
 		})
-		.when('/calendar/:Month/:Day', {
+		.when('/calendar/:Year/:Month/:Day', {
 			controller: 'CalendarDetailCtrl',
 			templateUrl: 'partials/calendar-detail.html'
 		})
