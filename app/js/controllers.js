@@ -36,15 +36,105 @@ function CalendarCtrl($scope) {
 
 		for (var i = 1; i < days; i += 7) {
 			//(i < days) ? i : "";
-			month.push({
-				"Sunday": (i < days) ? i : "",
-				"Monday": (i + 1 < days) ? i + 1 : "",
-				"Tuesday": (i + 2 < days) ? i + 2: "",
-				"Wednesday": (i + 3 < days) ? i + 3 : "",
-				"Thursday": (i + 4 < days) ? i + 4: "",
-				"Friday": (i + 5 < days) ? i + 5: "",
-				"Saturday": (i + 6 < days) ? i + 6 : ""
-			});
+			switch(first.getDay()) {
+				// case 0:
+				// 	month.push({
+				// 		"Sunday": (i < days) ? i : "",
+				// 		"Monday": (i + 1 < days) ? i + 1 : "",
+				// 		"Tuesday": (i + 2 < days) ? i + 2: "",
+				// 		"Wednesday": (i + 3 < days) ? i + 3 : "",
+				// 		"Thursday": (i + 4 < days) ? i + 4: "",
+				// 		"Friday": (i + 5 < days) ? i + 5: "",
+				// 		"Saturday": (i + 6 < days) ? i + 6 : ""
+				// 	});
+				// 	break;
+				case 1:
+					month.push({
+						"Monday": (i < days) ? i : "",
+						"Tuesday": (i + 1 < days) ? i + 1 : "",
+						"Wednesday": (i + 2 < days) ? i + 2: "",
+						"Thursday": (i + 3 < days) ? i + 3 : "",
+						"Friday": (i + 4 < days) ? i + 4: "",
+						"Saturday": (i + 5 < days) ? i + 5: "",
+						"Sunday": (i + 6 < days) ? i + 6 : ""
+					});
+					break;
+				case 2:
+					month.push({
+						"Tuesday": (i < days) ? i : "",
+						"Wednesday": (i + 1 < days) ? i + 1 : "",
+						"Thursday": (i + 2 < days) ? i + 2: "",
+						"Friday": (i + 3 < days) ? i + 3 : "",
+						"Saturday": (i + 4 < days) ? i + 4: "",
+						"Sunday": (i + 5 < days) ? i + 5: "",
+						"Monday": (i + 6 < days) ? i + 6 : ""
+					});
+					break;
+				case 3:
+					month.push({
+						"Wednesday": (i < days) ? i : "",
+						"Thursday": (i + 1 < days) ? i + 1 : "",
+						"Friday": (i + 2 < days) ? i + 2: "",
+						"Saturday": (i + 3 < days) ? i + 3 : "",
+						"Sunday": (i + 4 < days) ? i + 4: "",
+						"Monday": (i + 5 < days) ? i + 5: "",
+						"Tuesday": (i + 6 < days) ? i + 6 : ""
+					});
+					break;
+				case 4:
+					month.push({
+						"Thursday": (i < days) ? i : "",
+						"Friday": (i + 1 < days) ? i + 1 : "",
+						"Saturday": (i + 2 < days) ? i + 2: "",
+						"Sunday": (i + 3 < days) ? i + 3 : "",
+						"Monday": (i + 4 < days) ? i + 4: "",
+						"Tuesday": (i + 5 < days) ? i + 5: "",
+						"Thursday": (i + 6 < days) ? i + 6 : ""
+					});
+					break;
+				case 5:
+					month.push({
+						"Friday": (i < days) ? i : "",
+						"Saturday": (i + 1 < days) ? i + 1 : "",
+						"Sunday": (i + 2 < days) ? i + 2: "",
+						"Monday": (i + 3 < days) ? i + 3 : "",
+						"Tuesday": (i + 4 < days) ? i + 4: "",
+						"Wednesday": (i + 5 < days) ? i + 5: "",
+						"Thursday": (i + 6 < days) ? i + 6 : ""
+					});
+					break;
+				case 6:
+					month.push({
+						"Saturday": (i < days) ? i : "",
+						"Sunday": (i + 1 < days) ? i + 1 : "",
+						"Monday": (i + 2 < days) ? i + 2: "",
+						"Tuesday": (i + 3 < days) ? i + 3 : "",
+						"Wednesday": (i + 4 < days) ? i + 4: "",
+						"Thursday": (i + 5 < days) ? i + 5: "",
+						"Friday": (i + 6 < days) ? i + 6 : ""
+					});
+					break;
+				default:
+					month.push({
+						"Sunday": (i < days) ? i : "",
+						"Monday": (i + 1 < days) ? i + 1 : "",
+						"Tuesday": (i + 2 < days) ? i + 2: "",
+						"Wednesday": (i + 3 < days) ? i + 3 : "",
+						"Thursday": (i + 4 < days) ? i + 4: "",
+						"Friday": (i + 5 < days) ? i + 5: "",
+						"Saturday": (i + 6 < days) ? i + 6 : ""
+					});
+			}
+
+			// month.push({
+			// 	"Sunday": (i < days) ? i : "",
+			// 	"Monday": (i + 1 < days) ? i + 1 : "",
+			// 	"Tuesday": (i + 2 < days) ? i + 2: "",
+			// 	"Wednesday": (i + 3 < days) ? i + 3 : "",
+			// 	"Thursday": (i + 4 < days) ? i + 4: "",
+			// 	"Friday": (i + 5 < days) ? i + 5: "",
+			// 	"Saturday": (i + 6 < days) ? i + 6 : ""
+			// });
 		}
 
 		console.log(month);
