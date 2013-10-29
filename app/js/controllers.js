@@ -41,7 +41,7 @@ function CalendarCtrl($scope) {
 		var last = new Date(today.getFullYear(), today.getMonth(), days);
 
 		for (var i = 1; i < days; i += 7) {
-			console.log("i", i);
+			// console.log("i", i);
 			if (i === 1) {
 				switch(first.getDay()) {
 					case 1:
@@ -127,20 +127,15 @@ function CalendarCtrl($scope) {
 							"Saturday": (i + 6 < days) ? i + 6 : ""
 						});
 				}
-			} else if (i + last.getDay() === days) {
-				console.log('else if');
-				// switch(first.getDay()) {
-					
-				// }
 			} else {
 				month.push({
-					"Sunday": (i < days) ? i : "",
-					"Monday": (i + 1 < days) ? i + 1 : "",
-					"Tuesday": (i + 2 < days) ? i + 2: "",
-					"Wednesday": (i + 3 < days) ? i + 3 : "",
-					"Thursday": (i + 4 < days) ? i + 4: "",
-					"Friday": (i + 5 < days) ? i + 5: "",
-					"Saturday": (i + 6 < days) ? i + 6 : ""
+					"Sunday": (i <= days) ? i : "",
+					"Monday": (i + 1 <= days) ? i + 1 : "",
+					"Tuesday": (i + 2 <= days) ? i + 2: "",
+					"Wednesday": (i + 3 <= days) ? i + 3 : "",
+					"Thursday": (i + 4 <= days) ? i + 4: "",
+					"Friday": (i + 5 <= days) ? i + 5: "",
+					"Saturday": (i + 6 <= days) ? i + 6 : ""
 				});
 			}
 		}
