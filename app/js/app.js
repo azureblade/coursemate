@@ -17,8 +17,12 @@ App.config(function($routeProvider) {
 			templateUrl: 'partials/courses.html'
 		})
 		.when('/friends', {
-			controller: 'FriendsCtrl',
+			controller: 'FriendListCtrl',
 			templateUrl: 'partials/friends.html'
+		})
+		.when('/friends/:Username', {
+			controller: 'FriendProfileCtrl',
+			templateUrl: 'partials/profile.html'
 		})
 		.otherwise({ redirectTo: '/' });
 });

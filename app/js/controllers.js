@@ -6,7 +6,7 @@ function CoursesCtrl($scope) {
 
 }
 
-function FriendsCtrl($scope) {
+function FriendListCtrl($scope) {
 	$scope.friends = [
 		{
 			Username: "wrecking_ball",
@@ -24,4 +24,8 @@ function FriendsCtrl($scope) {
 			School: "Starfleet"
 		}
 	];
+}
+
+function FriendProfileCtrl($scope, $routeParams) {
+	$scope.Username = $routeParams.Username;
 }
