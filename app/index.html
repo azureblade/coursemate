@@ -27,9 +27,16 @@
 <body>
 	<div class="header">
 		<nav ng-controller="NavigationCtrl">
-			<ul class="nav">
-				<li class="clickable" id="{{e.Url}}" ng-click="click($event)" ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i>{{e.Name}}</li>
-			</ul>
+			<span>
+				<ul class="nav">
+					<li class="clickable" id="{{e.Url}}" ng-click="click($event)" ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i>{{e.Name}}</li>
+				</ul>
+			</span>
+			<span id="login">
+				<ul class="login">
+					<li><i class="fa fa-power-off"></i> {{Username}}</li>
+				</ul>
+			</span>
 		</nav>
 	</div>
 	<div class="container" ng-view></div>

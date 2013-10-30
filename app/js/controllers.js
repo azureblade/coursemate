@@ -18,14 +18,28 @@ function NavigationCtrl($scope, $location) {
 		{
 			Name: "Friends",
 			Url: "friends",
-			Icon: "fa fa-user"
+			Icon: "fa fa-group"
 		}
 	];
 
 	$scope.click = function(e) {
 		var elem = angular.element(e.srcElement);
-		console.log(elem.prop('id'));
 		$location.path('/' + elem.prop('id'));
+	}
+}
+
+function LoginCtrl($scope, $rootScope, $location) {
+	$scope.login = function(user) {
+		if (user) {
+			$rootScope.Username = user.Username;
+		}
+
+		// var elem = angular.element(document.getElementById('login');
+		var elem = angular.element(document.querySelector('#login'));
+		console.log(elem);
+		elem.css('display', 'inline');
+
+		$location.path('/');
 	}
 }
 

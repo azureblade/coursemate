@@ -45,8 +45,28 @@ nav {
 	height: 35px;
 }
 
+#login {
+	display: none;
+}
+
+.login {
+	position: absolute;
+	top: 15px;
+	left: calc(100% - 250px);
+	height: 35px;
+}
+
 .nav li:hover {
 	background: #276195;
+}
+
+.login li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+span {
+	display: inline-block;
 }
 
 a, a:visited {

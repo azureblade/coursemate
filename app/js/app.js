@@ -8,6 +8,10 @@ App.config(function($routeProvider) {
 			controller: '',
 			templateUrl: 'partials/splash.html'
 		})
+		.when('/login', {
+			controller: 'LoginCtrl',
+			templateUrl: 'partials/login.html'
+		})
 		.when('/calendar', {
 			controller: 'CalendarCtrl',
 			templateUrl: 'partials/calendar.html'
@@ -32,5 +36,5 @@ App.config(function($routeProvider) {
 			controller: 'FriendProfileCtrl',
 			templateUrl: 'partials/profile.html'
 		})
-		.otherwise({ redirectTo: '/' });
+		.otherwise({ redirectTo: '/login' });
 });
