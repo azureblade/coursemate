@@ -12,6 +12,14 @@ App.config(function($routeProvider) {
 			controller: 'LoginCtrl',
 			templateUrl: 'partials/login.html'
 		})
+		.when('/logout', {
+			controller: 'LogoutCtrl',
+			templateUrl: 'partials/logout.html'
+		})
+		.when('/profile', {
+			controller: 'ProfileCtrl',
+			templateUrl: 'partials/profile.html'
+		})
 		.when('/calendar', {
 			controller: 'CalendarCtrl',
 			templateUrl: 'partials/calendar.html'
@@ -34,7 +42,7 @@ App.config(function($routeProvider) {
 		})
 		.when('/friends/:Username', {
 			controller: 'FriendProfileCtrl',
-			templateUrl: 'partials/profile.html'
+			templateUrl: 'partials/friend-profile.html'
 		})
 		.otherwise({ redirectTo: '/login' });
 });

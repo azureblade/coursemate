@@ -41,6 +41,14 @@ function LoginCtrl($scope, $rootScope, $location) {
 	}
 }
 
+function LogoutCtrl($scope) {
+	
+}
+
+function ProfileCtrl($scope) {
+
+}
+
 function CalendarCtrl($scope, $location) {
 	$scope.today = new Date();
 	$scope.current = $scope.today;

@@ -97,6 +97,7 @@ ul li:hover > ul {
 
 .sublist li:hover {
 	background: #3c88cc;
+	cursor: pointer;
 }
 
 span {
