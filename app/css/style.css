@@ -74,7 +74,7 @@ th {
 }
 
 td {
-	padding: 0px 50px 0px 0px;
+	/*padding: 0px 50px 0px 0px;*/
 }
 
 .search {
@@ -120,8 +120,19 @@ hr {
 	opacity: .9;
 }
 
-table.calendar > tbody > tr > td > a:hover {
-	color: #3c88cc;
+table.calendar > tbody > tr > th {
+	text-align: center;
+	width: 110px;
+	padding: 0 0 0 0;
+}
+
+table.calendar > tbody > tr > td {
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+table.calendar > tbody > tr > td:hover {
+	background: #3c88cc;
 	cursor: pointer;
 	text-decoration: none;
 }

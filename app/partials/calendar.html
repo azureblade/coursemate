@@ -13,13 +13,13 @@
 			<th>Saturday</th>
 		</tr>
 		<tr ng-repeat="week in month">
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Sunday}}">{{week.Sunday}}</a></td>
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Monday}}">{{week.Monday}}</a></td>
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Tuesday}}">{{week.Tuesday}}</a></td>
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Wednesday}}">{{week.Wednesday}}</a></td>
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Thursday}}">{{week.Thursday}}</a></td>
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Friday}}">{{week.Friday}}</a></td>
-			<td><a href="#/calendar/{{current.getFullYear()}}/{{current.getMonth() + 1}}/{{week.Saturday}}">{{week.Saturday}}</a></td>
+				<td id="{{week.Sunday}}" class="clickable" ng-click="click($event)">{{week.Sunday}}</td>
+				<td id="{{week.Monday}}" class="clickable" ng-click="click($event)">{{week.Monday}}</td>
+				<td id="{{week.Tuesday}}" class="clickable" ng-click="click($event)">{{week.Tuesday}}</td>
+				<td id="{{week.Wednesday}}" class="clickable" ng-click="click($event)">{{week.Wednesday}}</td>		
+				<td id="{{week.Thursday}}" class="clickable" ng-click="click($event)">{{week.Thursday}}</td>
+				<td id="{{week.Friday}}" class="clickable" ng-click="click($event)">{{week.Friday}}</td>
+				<td id="{{week.Saturday}}" class="clickable" ng-click="click($event)">{{week.Saturday}}</td>
 		</tr>
 	</table>
 </div>
