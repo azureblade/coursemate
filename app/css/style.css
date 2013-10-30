@@ -52,7 +52,7 @@ nav {
 .login {
 	position: absolute;
 	top: 0px;
-	/*width: 180px;*/
+	min-width: 156px;
 	left: calc(100% - 250px);
 }
 
