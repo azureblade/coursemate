@@ -22,6 +22,19 @@ function NavigationCtrl($scope, $location) {
 		}
 	];
 
+	$scope.menu = [
+		{
+			Name: "Profile",
+			Url: "/profile",
+			Icon: ""
+		},
+		{
+			Name: "Logout",
+			Url: "/logout",
+			Icon: ""
+		}
+	];
+
 	$scope.click = function(e) {
 		var elem = angular.element(e.srcElement);
 		$location.path('/' + elem.prop('id'));
@@ -42,7 +55,7 @@ function LoginCtrl($scope, $rootScope, $location) {
 }
 
 function LogoutCtrl($scope) {
-	
+
 }
 
 function ProfileCtrl($scope) {
