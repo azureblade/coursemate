@@ -46,12 +46,13 @@ nav {
 }
 
 #login {
-	display: none;
+	/*display: none;*/
 }
 
 .login {
 	position: absolute;
-	top: 15px;
+	padding: 15px 10px 0 10px;
+	top: 0px;
 	left: calc(100% - 250px);
 	height: 35px;
 }
@@ -63,6 +64,24 @@ nav {
 .login li {
 	display: inline-block;
 	list-style-type: none;
+}
+
+.login li:hover {
+	background: #276195;
+}
+
+ul.login ul {
+	display: none;
+}
+
+ul li:hover > ul {
+	display: block;
+}
+
+.sublist {
+	height: 35px;
+	margin: 12px 0 0 0;
+	background: #276195;
 }
 
 span {
@@ -138,7 +157,7 @@ hr {
 	display: block;
 	width: 100px;
 	height: 30px;
-	background-color: #3c88cc;
+	background: #3c88cc;
 	text-align: center;
 	line-height: 30px;
 	text-decoration: none;
@@ -146,7 +165,9 @@ hr {
 
 .btn:hover {
 	text-decoration: none;
-	opacity: .9;
+	cursor: pointer;
+	/*opacity: .9;*/
+	background: #276195;
 }
 
 table.courses > tbody > tr > th:not(.icon) {

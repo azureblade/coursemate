@@ -34,7 +34,12 @@
 			</span>
 			<span id="login">
 				<ul class="login">
-					<li><i class="fa fa-power-off"></i> {{Username}}</li>
+					<li>
+						<i class="nav fa fa-power-off"></i>{{Username || "test_user"}}
+						<ul class="sublist">
+							<li>Logout</li>
+						</ul>
+					</li>
 				</ul>
 			</span>
 		</nav>

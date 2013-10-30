@@ -34,9 +34,7 @@ function LoginCtrl($scope, $rootScope, $location) {
 			$rootScope.Username = user.Username;
 		}
 
-		// var elem = angular.element(document.getElementById('login');
 		var elem = angular.element(document.querySelector('#login'));
-		console.log(elem);
 		elem.css('display', 'inline');
 
 		$location.path('/');
@@ -201,8 +199,12 @@ function CalendarCtrl($scope, $location) {
 	}
 }
 
-function CalendarDetailCtrl($scope, $routeParams) {
+function CalendarDetailCtrl($scope, $routeParams, $location) {
 	$scope.current = new Date($routeParams.Year, $routeParams.Month - 1, $routeParams.Day);
+
+	$scope.click = function(e) {
+		$location.path('/calendar');
+	}
 }
 
 function CourseListCtrl($scope, $http, $location) {
@@ -245,8 +247,12 @@ function FriendListCtrl($scope, $http, $location) {
 	}
 }
 
-function FriendProfileCtrl($scope, $routeParams, $http) {
+function FriendProfileCtrl($scope, $routeParams, $http, $location) {
 	$http.get('./temp-data/friends.json').success(function(data) {
 		$scope.Friend = data[$routeParams.Username];
 	});
+
+	$scope.click = function(e) {
+		$location.path('/friends');
+	}
 }
