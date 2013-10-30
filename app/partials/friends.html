@@ -4,13 +4,13 @@
 <div class="content">
 	<table class="friends">
 		<tr>
-			<th></th>
+			<th class="icon"></th>
 			<th>Username</th>
 			<th>Name</th>
 			<th>School</th>
 		</tr>
 		<tr class="clickable" id="{{friend.Username}}" ng-click="click($event)" ng-repeat="friend in friends | filter: q">
-			<td class="fa fa-user"></td>
+			<td class="icon fa fa-user"></td>
 			<td>{{friend.Username}}</td>
 			<td>{{friend.Name}}</td>
 			<td>{{friend.School}}</td>

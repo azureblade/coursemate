@@ -120,10 +120,35 @@ hr {
 	opacity: .9;
 }
 
+table.courses > tbody > tr > th:not(.icon) {
+	/*width: 100px;*/
+	text-align: center;
+	padding: 0 50px 0 50px;
+}
+
+table.courses > tbody > tr > td:not(.icon) {
+	/*text-align: center;*/
+	padding: 0 50px 0 50px
+}
+
+table.friends > tbody > tr > th:not(.icon) {
+	/*width: 100px;*/
+	text-align: center;
+	padding: 0 50px 0 50px;
+}
+
+table.friends > tbody > tr > td:not(.icon) {
+	/*text-align: center;*/
+	padding: 0 50px 0 50px
+}
+
+.icon {
+	width: 20px;
+}
+
 table.calendar > tbody > tr > th {
 	text-align: center;
 	width: 110px;
-	padding: 0 0 0 0;
 }
 
 table.calendar > tbody > tr > td {
