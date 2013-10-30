@@ -32,7 +32,12 @@ function CalendarCtrl($scope, $location) {
 
 	$scope.click = function(e) {
 		var elem = angular.element(e.srcElement);
-		$location.path('/calendar/' + $scope.current.getFullYear() + '/' + ($scope.current.getMonth() + 1) + '/' + elem.prop('id'));
+		
+		if (elem.prop('id') == "") {
+			$location.path('/calendar');
+		} else {
+			$location.path('/calendar/' + $scope.current.getFullYear() + '/' + ($scope.current.getMonth() + 1) + '/' + elem.prop('id'));
+		}
 	}
 
 	function generate(m) {
