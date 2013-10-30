@@ -9,9 +9,9 @@
 			<th>Name</th>
 			<th>School</th>
 		</tr>
-		<tr ng-repeat="friend in friends | filter: q">
+		<tr class="clickable" id="{{friend.Username}}" ng-click="click($event)" ng-repeat="friend in friends | filter: q">
 			<td class="fa fa-user"></td>
-			<td><a href="#/friends/{{friend.Username}}">{{friend.Username}}</a></td>
+			<td>{{friend.Username}}</td>
 			<td>{{friend.Name}}</td>
 			<td>{{friend.School}}</td>
 		</tr>

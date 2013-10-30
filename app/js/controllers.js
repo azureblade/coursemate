@@ -180,7 +180,7 @@ function CalendarDetailCtrl($scope, $routeParams) {
 	$scope.current = new Date($routeParams.Year, $routeParams.Month - 1, $routeParams.Day);
 }
 
-function CourseListCtrl($scope, $http) {
+function CourseListCtrl($scope, $http, $location) {
 	$http.get('./temp-data/courses.json').success(function(data) {
 		var courses = [];
 
@@ -190,6 +190,11 @@ function CourseListCtrl($scope, $http) {
 
 		$scope.courses = courses;
 	});
+
+	$scope.click = function(e) {
+		var elem = angular.element(e.srcElement.parentNode);
+		$location.path('/courses/' + elem.prop('id'));
+	}
 }
 
 function CourseDetailCtrl($scope, $routeParams, $http) {
@@ -198,7 +203,7 @@ function CourseDetailCtrl($scope, $routeParams, $http) {
 	});
 }
 
-function FriendListCtrl($scope, $http) {
+function FriendListCtrl($scope, $http, $location) {
 	$http.get('./temp-data/friends.json').success(function(data) {
 		var friends = [];
 
@@ -208,6 +213,11 @@ function FriendListCtrl($scope, $http) {
 
 		$scope.friends = friends;
 	});
+
+	$scope.click = function(e) {
+		var elem = angular.element(e.srcElement.parentNode);
+		$location.path('/friends/' + elem.prop('id'));
+	}
 }
 
 function FriendProfileCtrl($scope, $routeParams, $http) {

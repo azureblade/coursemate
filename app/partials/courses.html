@@ -11,9 +11,9 @@
 			<th>Grade</th>
 			<th>Credits</th>
 		</tr>
-		<tr ng-repeat="course in courses | filter: q">
+		<tr class="clickable" id="{{course.ID.condense()}}" ng-click="click($event)" ng-repeat="course in courses | filter: q">
 			<td class="fa fa-book"></td>
-			<td><a href="#/courses/{{course.ID.condense()}}">{{course.ID}}</a></td>
+			<td>{{course.ID}}</td>
 			<td>{{course.Name}}</td>
 			<td>{{course.Grade}}</td>
 			<td>{{course.Credits}}</td>
