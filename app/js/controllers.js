@@ -1,26 +1,32 @@
-function NavigationCtrl($scope) {
+function NavigationCtrl($scope, $location) {
 	$scope.nav = [
 		{
 			Name: "Home",
-			Url: "#/",
+			Url: "#",
 			Icon: "fa fa-home"
 		},
 		{
 			Name: "Calendar",
-			Url: "#/calendar",
+			Url: "calendar",
 			Icon: "fa fa-calendar"
 		},
 		{
 			Name: "Courses",
-			Url: "#/courses",
+			Url: "courses",
 			Icon: "fa fa-book"
 		},
 		{
 			Name: "Friends",
-			Url: "#/friends",
+			Url: "friends",
 			Icon: "fa fa-user"
 		}
 	];
+
+	$scope.click = function(e) {
+		var elem = angular.element(e.srcElement);
+		console.log(elem.prop('id'));
+		$location.path('/' + elem.prop('id'));
+	}
 }
 
 function CalendarCtrl($scope, $location) {
@@ -32,7 +38,7 @@ function CalendarCtrl($scope, $location) {
 
 	$scope.click = function(e) {
 		var elem = angular.element(e.srcElement);
-		
+
 		if (elem.prop('id') == "") {
 			$location.path('/calendar');
 		} else {

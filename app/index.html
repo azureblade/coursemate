@@ -28,7 +28,7 @@
 	<div class="header">
 		<nav ng-controller="NavigationCtrl">
 			<ul class="nav">
-				<li ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i><a href="{{e.Url}}">{{e.Name}}</a></li>
+				<li class="clickable" id="{{e.Url}}" ng-click="click($event)" ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i>{{e.Name}}</li>
 			</ul>
 			<!-- <ul class="nav">
 				<li><a href="#/">Home</a></li>
