@@ -29,7 +29,7 @@
 		<nav ng-controller="NavigationCtrl">
 			<span>
 				<ul class="nav">
-					<li class="clickable" id="{{e.Url}}" ng-click="click($event)" ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i>{{e.Name}}</li>
+					<li class="clickable" href="{{e.Url}}" ng-click="click($event)" ng-repeat="e in nav"><i class="nav {{e.Icon}}"></i>{{e.Name}}</li>
 				</ul>
 			</span>
 			<span id="login">
@@ -37,7 +37,7 @@
 					<li>
 						<i class="nav fa fa-power-off"></i>{{Username || "test_user"}}
 						<ul class="sublist">
-							<li class="clickable" id="{{e.Url}}" ng-click="click($event)" ng-repeat="e in menu">{{e.Name}}</li>
+							<li class="clickable" href="{{e.Url}}" ng-click="click($event)" ng-repeat="e in menu">{{e.Name}}</li>
 							<!-- <li class="clickable" id="profile" ng-click="click($event)">Profile</li>
 							<li class="clickable" id="logout" ng-click="click($event)">Logout</li> -->
 						</ul>
